@@ -1,0 +1,17 @@
+trigger:
+  branches:
+    exclude:
+      - '*'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    python --version
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+- script: |
+    python add.py
+  displayName: 'Run Python script'
