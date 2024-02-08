@@ -11,7 +11,8 @@ steps:
     python --version
     pip install -r requirements.txt
   displayName: 'Install dependencies'
-
-- script: |
-    python add.py
-  displayName: 'Run Python script'
+- task: CmdLine@2
+  inputs:
+    script: |
+      python addtwo.py
+      pathonaddto
